@@ -25,10 +25,11 @@ except ZeroDivisionError as e:
 
 ```
 ```js
-  print("hello, world)
 ```
 SyntaxError: unterminated string literal (detected at line 3)
 ```
+  print("hello, world)
+
 ```
 ```js
   input cat
@@ -36,6 +37,10 @@ x = int(input("What,s X?"))
 print(f"X is {x}")
 ```
 ```js
+```
+
+ValueError: invalid literal for int() with base 10: 'cat'
+```
 try:
      x = int(input("What,s X?"))
      print(f"X is {x}")
@@ -43,6 +48,7 @@ except ValueError:
      print("X is not an integer")     
 
 ````
+
 ```js
 ```
 NameError: name 'x' is not defined
@@ -55,8 +61,65 @@ except ValueError:
 
      print(f"X is {x}")    
 
+
+```
+```js
+ try:
+     x = int(input("What,s X?"))
+except ValueError:
+     print("X is not an integer") 
+else:
+
+     print(f"X is {x}")    
+```
+```js
+   try again and again because loop
+  breack the when enter an integer
+while True:
+    try:
+         x = int(input("What,s X?"))
+    except ValueError:
+         print("X is not an integer") 
+    else:
+        break
+print(f"X is {x}")    
+```
+```js
+while True:
+    try:
+         x = int(input("What,s X?"))
+         break
+    except ValueError:
+         print("X is not an integer") 
+    
+       
+print(f"X is {x}")    
+
+````
+```js
+def main():
+    x = get_int()
+    print(f"X is {x}")  
+
+
+def get_int():
+    while True:
+        try:
+            x = int(input("What's X? "))  # Also corrected typo in prompt
+        except ValueError:
+            print("X is not an integer") 
+        else:
+            break
+        
+    return x  # Fixed indentation
+
+
+main()
+
 ```
 
-ValueError: invalid literal for int() with base 10: 'cat'
-```
-```
+
+
+
+
+
